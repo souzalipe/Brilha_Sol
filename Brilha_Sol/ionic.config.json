@@ -1,0 +1,7 @@
+{
+  "name": "Brilha_Sol",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
