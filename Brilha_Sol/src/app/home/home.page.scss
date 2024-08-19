@@ -1,0 +1,75 @@
+#img-section-onu{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    background-color: #d9d9d9; 
+}
+
+.div-title-2{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: "Francois One", sans-serif;
+    color: #024b57;
+}
+
+.section-3{
+    display: flex;
+    justify-content: space-around
+}
+
+#p-section-3{
+    width: 400px;
+    font-family:  "Montserrat", sans-serif;    
+    text-align: justify;
+}
+
+.section-4{
+    background-color: #faf36d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#title-section-4{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Francois One", sans-serif;
+    color: #024b57;
+}
+
+.p-section-4{
+    font-family:  "Montserrat", sans-serif;    
+    font-size: 18px;
+}
+
+#btn-seja-voluntario{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Francois One", sans-serif;
+    background-color: #006C7C;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btn-seja-voluntario:hover{
+    background-color: #035461;
+}
+
+#a-btn-seja-voluntario{
+    text-decoration: none;
+}

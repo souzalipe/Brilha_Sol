@@ -1,18 +1,11 @@
-
-footer{
+footer {
     background-color: #006C7C;
     left: 0;
     bottom: 0;
     width: 100%;
     line-height: 2rem;
-}
-
-a{
-    color: inherit;
-}
-
-a:visited{
-    color: inherit;
+    position: fixed; /* Fixa o footer na parte inferior da tela */
+    z-index: 1000; /* Garante que o footer esteja acima de outros elementos */
 }
 
 .footer-content {
@@ -26,11 +19,11 @@ a:visited{
     flex-grow: 1; 
     text-align: center;
     margin: 0; 
-    font-family:  "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #d9d9d9;
     font-size: 18px;
 }
 
-.img-footer{
+.img-footer {
     margin-right: auto; 
 }
