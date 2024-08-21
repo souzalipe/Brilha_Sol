@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Average+Sans&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Francois+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-header{
-    background-color: #006C7C;
-    position:fixed;
-    width: 100%;
+body {
+    font-family: "Roboto", sans-serif;
+    padding-top: 70px; /* Espaço para o header fixo */
 }
 
-.list-nav{
+header {
+    background-color: #006C7C;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o header fique acima do conteúdo */
+}
+
+.list-nav {
     display: flex;
     align-items: center;
     list-style: none;
     justify-content: space-around;
+    padding: 10px 0;
 }
 
-.btn-info-nav{
+.btn-info-nav {
     border-bottom-style: solid;
     border-bottom-width: 5px;
     border-bottom-color: #006C7C;
@@ -34,49 +42,49 @@ header{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 20px;
+    text-decoration: none;
 }
 
-.btn-info-nav:hover{
+.btn-info-nav:hover {
     border-bottom-color: #faf36d;
     color: #faf36d;
 }
 
-.list-social{
+.list-social {
     display: flex;
     align-items: end;
     justify-content: space-around;
     gap: 20px;
 }
 
-.social:hover{
+.social:hover {
     transform: scale(1.1);
 }
 
-.section-onu-1{
+.section-onu-1 {
     display: flex;
     flex-direction: column;
     background-color: #faf36d;
-    padding: 30px ;
-    margin-top: -5px;
-    margin-bottom: 0px;
+    padding: 30px;
+    margin: 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-#title-section-onu{
+#title-section-onu {
     margin-bottom: 30px;
     font-family: "Francois One", sans-serif;
     font-size: 30px;
     color: #024b57;
 }
 
-#p-section-onu{
+#p-section-onu {
     width: 600px;
     height: 100px;
-    font-family:  "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.btn-sobre-nos{
+.btn-sobre-nos {
     height: 40px;
     width: 120px;
     margin-top: 50px;
@@ -87,13 +95,15 @@ header{
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
-.btn-sobre-nos:hover{
+.btn-sobre-nos:hover {
     background-color: #035461;
 }
 
-.div-title{
+.div-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,26 +114,26 @@ header{
     font-size: 25px;
 }
 
-.section-2{
+.section-2 {
     display: flex;
     justify-content: space-around;
     margin: 20px;
 }
 
-.cont-section-2{
+.cont-section-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#p-section-2{
+#p-section-2 {
     width: 400px;
     margin-bottom: 20px;
-    font-family:  "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: justify;
 }
 
-#btn-saiba-mais{
+#btn-saiba-mais {
     height: 40px;
     width: 120px;
     margin-top: 20px;
@@ -134,13 +144,15 @@ header{
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
-#btn-saiba-mais:hover{
+#btn-saiba-mais:hover {
     background-color: #035461;
 }
 
-#img-section-onu{
+#img-section-onu {
     max-width: 100%;
     height: auto;
 }
