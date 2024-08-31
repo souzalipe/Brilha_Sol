@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    
+  }
+  
+  .conteiner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    font-family: "Libre Franklin", sans-serif;
+  }
+  
+//   .card {
+//     background-color: #fff;
+//     padding: 30px;
+//     border-radius: 4%;
+//     margin-top: 1px;
+//     margin-bottom: 135px;
+//   }
+  
+
+  ion-card-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5d5d5d;
+    font-weight: 700;
+    font-size: 29px;
+  }
+  
+  ion-item {
+    --highlight-height: 0;
+    --background: none;
+    --min-height: 0;
+    margin-bottom: 20px;
+  }
+  
+  ion-label {
+    color: #5d5d5d;
+    position: relative;
+    padding-top: 13px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .label ion-input {
+    padding: 5px 5px;
+    border: 0;
+    border-bottom: 2px solid #5d5d5d;
+    background-color: transparent;
+    outline: none;
+    min-width: 100px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+  }
+  
+  .label ion-input:focus {
+    border-bottom: 2px solid #5d5d5d;
+  }
+  
+  .label {
+    color: #5d5d5d;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transform: all .3s ease-out;
+  }
+  
+  .label ion-input:focus {
+    font-size: 13px;
+    margin-top: 0;
+    color: #5d5d5d;
+  }
+  
+  .btn-entrar {
+    background-color: #ee861d;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .btn-entrar:hover  {
+    background-color: #f17430;
+  }
+
+  p{
+    color: #5d5d5d;
+  }
+
+  a{
+    text-decoration: none;
+    color:#ee861d;
+    font-weight: bold;
+  }
+
+  hr{
+    background-color: #5d5d5d !important;
+  }
+  
+  p{
+    margin-top: 13px;
+   margin-left: 30px;
+  }
+
+  
