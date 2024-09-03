@@ -9,10 +9,19 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    // margin-top: 100px;
     font-family: "Libre Franklin", sans-serif;
   }
   
+  .icon_sol{
+    height: 60px;
+  }
+
+  .conteiner_icon{
+    margin-bottom: 0px;
+    height: 50px;
+  }
+
   .card {
     background-color: #fff;
     padding: 30px;
@@ -81,10 +90,12 @@
   }
   
   .btn-entrar:hover  {
-    background-color: #f17430;
+    background: linear-gradient(60seg, #ff6a6a, #ffc371);
   }
 
   p{
+    display: flex;
+    margin-right: 14px;
     color: #5d5d5d;
   }
 
