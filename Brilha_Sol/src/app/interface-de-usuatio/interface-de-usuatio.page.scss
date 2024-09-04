@@ -2,17 +2,55 @@
     margin-top: 100px;
 }
 
+.title-user {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Opcional: para destacar o texto */
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+  
+
+  
+
+ionic-button{
+    background-color: #ee861d;
+}
+
 ion-avatar{
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    border-color: red($color: red);
+    border: 2px solid rgba(143, 134, 240, 0.897);
+    border-radius: 50%; /* Mantém o avatar circular */
 }
 
-.button-salvar{
-
+.button-salvar,
+.button-excluir {
+  width: 80%; /* Ajuste a largura conforme necessário */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin: 0 auto; /* Centraliza o botão horizontalmente */
 }
 
-.button-excluir{
-    
+.button-salvar {
+  background-color: #ee861d;
+  margin-bottom: 9px;
+  margin-top: 10px;
+}
+
+.button-excluir {
+  background-color: #e41313; /* Cor personalizada para o botão excluir */
+}
+
+.button-salvar:hover,
+.button-excluir:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+.button-salvar:hover {
+  background-color: #ff9c3a; /* Torna a cor um pouco mais clara no hover */
+}
+
+.button-excluir:hover {
+  background-color: #ff4d4d; /* Torna a cor um pouco mais clara no hover */
 }
