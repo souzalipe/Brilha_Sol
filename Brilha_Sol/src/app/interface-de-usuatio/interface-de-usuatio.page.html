@@ -1,87 +1,93 @@
-        <ion-menu contentId="main-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title class="tittle-us">Well come back</ion-title>
-          <ion-avatar slot="end">
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-       
-      </ion-content>
-    </ion-menu>
-    <div class="ion-page" id="main-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-        </ion-toolbar>
-        
-      </ion-header>
-      <ion-content class="ion-padding"> 
+<!-- Side Menu -->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <!-- Ícone de avatar no início como botão -->
+      <ion-avatar slot="end">
+        <img slot="end" src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
+      </ion-avatar>
 
-        <ion-card id="meu-painel">
-          <ion-card-content>
-            <p>Olá, Nome do Usuário</p>
-            <ion-button routerLink="/home">Sair</ion-button>
-          </ion-card-content>
-        </ion-card>
+      <!-- Título do menu -->
+      <ion-title class="tittle-us">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-        <ion-card id="pedidos">
-          <ion-list>
-            <ion-item>
-              <ion-label>Pedido #1234</ion-label>
-              <ion-note slot="end">R$ 99,99</ion-note>
-            </ion-item>
-            
-          </ion-list>
-        </ion-card>
+  <ion-content class="ion-padding">
+    <!-- Conteúdo do menu lateral -->
+    <ion-list>
+      <ion-item routerLink="/profile">Perfil</ion-item>
+      <ion-item routerLink="/settings">Configurações</ion-item>
+      <ion-item routerLink="/logout">Sair</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-        <ion-card>
-          <ion-list>
-            <ion-item>
-              <ion-label>Rua Exemplo, 123</ion-label>
-              <ion-note slot="end">CEP: 00000-000</ion-note>
-            </ion-item>
-            <!-- Adicione mais itens aqui -->
-          </ion-list>
-        </ion-card>
+<!-- Página principal -->
+<ion-header>
+  <ion-toolbar>
+    <!-- Avatar no lugar do ícone de menu (hambúrguer) -->
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
+      </ion-button>
+    </ion-buttons>
 
-        <ion-card id="detalhes-conta">
-          <ion-item>
-            <ion-label position="floating">Nome</ion-label>
-            <ion-input value=""></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" value=""></ion-input>
-          </ion-item>
-          <ion-button expand="full">Salvar alterações</ion-button>
-      </ion-card>
+    <ion-title>Perfil do Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content id="main-content" class="ion-padding">
+  <ion-card id="meu-painel">
+    <ion-card-content>
+      <p>Olá, Nome do Usuário</p>
+      <ion-button routerLink="/home">Sair</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="pedidos">
+    <ion-list>
       <ion-item>
-        <ion-label position="floating">Senha atual</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label>Pedido #1234</ion-label>
+        <ion-note slot="end">R$ 99,99</ion-note>
       </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
       <ion-item>
-        <ion-label position="floating">Nova senha</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label>Rua Exemplo, 123</ion-label>
+        <ion-note slot="end">CEP: 00000-000</ion-note>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirmar nova senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-      <ion-button  color="#ee861d;" expand="full" class="button-salvar">Salvar alteraçõe</ion-button>
-      <ion-button  color="#e41313" expand="full" class="button-excluir">Excluir conta</ion-button>
+    </ion-list>
+  </ion-card>
 
-      </ion-content>
+  <ion-card id="detalhes-conta">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" value=""></ion-input>
+    </ion-item>
+    <ion-button expand="full">Salvar alterações</ion-button>
+  </ion-card>
 
-      
-    </div>
+  <ion-item>
+    <ion-label position="floating">Senha atual</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nova senha</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Confirmar nova senha</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
 
-      
-       
-          
-
+  <!-- Botões de ação -->
+  <ion-button expand="full" class="button-salvar" style="background-color: #ee861d;">Salvar alterações</ion-button>
+  <ion-button expand="full" class="button-excluir" color="danger">Excluir conta</ion-button>
+</ion-content>
