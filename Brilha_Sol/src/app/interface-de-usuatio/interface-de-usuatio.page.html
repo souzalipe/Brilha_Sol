@@ -1,38 +1,33 @@
 <!-- Side Menu -->
-<ion-menu contentId="main-content">
+<ion-menu side="start" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <!-- Ícone de avatar no início como botão -->
-      <ion-avatar slot="end">
-        <img slot="end" src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
-      </ion-avatar>
-
       <!-- Título do menu -->
-      <ion-title class="tittle-us">Menu</ion-title>
+      <ion-title class="tittle-us">Mais opções</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding">
     <!-- Conteúdo do menu lateral -->
     <ion-list>
-      <ion-item routerLink="/profile">Perfil</ion-item>
-      <ion-item routerLink="/settings">Configurações</ion-item>
-      <ion-item routerLink="/logout">Sair</ion-item>
+      <ion-item routerLink="/home">Home</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
+
+
 
 <!-- Página principal -->
 <ion-header>
   <ion-toolbar>
     <!-- Avatar no lugar do ícone de menu (hambúrguer) -->
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-button>
         <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
       </ion-button>
     </ion-buttons>
 
-    <ion-title>Perfil do Usuário</ion-title>
+    <ion-title>Brilha Sol</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -62,30 +57,8 @@
     </ion-list>
   </ion-card>
 
-  <ion-card id="detalhes-conta">
-    <ion-item>
-      <ion-label position="floating">Nome</ion-label>
-      <ion-input value=""></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" value=""></ion-input>
-    </ion-item>
-    <ion-button expand="full">Salvar alterações</ion-button>
-  </ion-card>
+ 
 
-  <ion-item>
-    <ion-label position="floating">Senha atual</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Nova senha</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Confirmar nova senha</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
 
   <!-- Botões de ação -->
   <ion-button expand="full" class="button-salvar" style="background-color: #ee861d;">Salvar alterações</ion-button>
