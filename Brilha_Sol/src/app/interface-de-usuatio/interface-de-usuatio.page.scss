@@ -9,6 +9,15 @@
     font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
 }
     
+ion-toolbar{
+--background: #006c7c;
+}
+
+ion-title{
+  color: #fff; /* Texto branco */
+  font-weight: 600; /* Aumenta o peso da fonte para mais nitidez */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Leve sombra para destaque */
+}
 
 ionic-button{
     background-color: #ee861d;
@@ -27,6 +36,11 @@ ion-avatar{
   width: 80%; /* Ajuste a largura conforme necessário */
   border-radius: 50px; /* Bordas arredondadas */
   margin: 0 auto; /* Centraliza o botão horizontalmente */
+}
+
+ion-card{
+  height: 100px;
+  margin-bottom: 34px;
 }
 
 .button-salvar {

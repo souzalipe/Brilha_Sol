@@ -1,35 +1,16 @@
-<!-- Side Menu -->
-<ion-menu side="start" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <!-- Título do menu -->
-      <ion-title class="tittle-us">Mais opções</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content class="ion-padding">
-    <!-- Conteúdo do menu lateral -->
-    <ion-list>
-      <ion-item routerLink="/home">Home</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
-
-
-<!-- Página principal -->
-<ion-header>
+<ion-header class="custom-header">
   <ion-toolbar>
-    <!-- Avatar no lugar do ícone de menu (hambúrguer) -->
-    <ion-buttons slot="end">
+    <ion-buttons class="header" slot="end">
       <ion-button>
         <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
       </ion-button>
     </ion-buttons>
 
     <ion-title>Brilha Sol</ion-title>
+
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content id="main-content" class="ion-padding">
   <ion-card id="meu-painel">
