@@ -1,68 +1,108 @@
-.conteiner{
-    margin-top: 100px;
+/* Container principal */
+.conteiner {
+  margin-top: 100px;
 }
 
+/* Estilo para o título */
 .title-user {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    -webkit-text-fill-color: transparent;
-    font-weight: bold; /* Opcional: para destacar o texto */
-    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-}
-    
-ion-toolbar{
---background: #006c7c;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-ion-title{
-  color: #fff; /* Texto branco */
-  font-weight: 600; /* Aumenta o peso da fonte para mais nitidez */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Leve sombra para destaque */
+/* Estilo para a barra de ferramentas */
+ion-toolbar {
+  --background: #006c7c;
 }
 
-ionic-button{
-    background-color: #ee861d;
+/* Estilo para o título */
+ion-title {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-ion-avatar{
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border: 2px solid rgba(143, 134, 240, 0.897);
-    border-radius: 50%; /* Mantém o avatar circular */
+/* Corrigindo o seletor ion-button */
+ion-button {
+  --background: #ee861d;
 }
 
-.button-salvar,
+/* Avatar circular */
+ion-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border: 2px solid rgba(143, 134, 240, 0.897);
+  border-radius: 50%; 
+}
+
+/* Botão "Sair" arredondado */
+.round-button {
+  --border-radius: 50px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --background: #3880ff;
+}
+
+/* Centralizando os botões */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilo para o botão "Salvar alterações" */
+.button-salvar, .button-excluir {
+  --border-radius: 50px;
+  --padding-start: 24px;
+  --padding-end: 24px;
+  width: 90%; /* Ajusta a largura */
+  max-width: 300px; /* Limita a largura máxima */
+  height: 50px; /* Define a altura */
+  text-align: center; /* Centraliza o texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adicionando sombra arredondada */
+  overflow: hidden;
+}
+
+/* Estilo para o botão "Salvar alterações" */
+.button-salvar {
+  background-color: #ee861d;
+}
+
+/* Estilo para o botão "Excluir conta" */
 .button-excluir {
-  width: 80%; /* Ajuste a largura conforme necessário */
-  border-radius: 50px; /* Bordas arredondadas */
-  margin: 0 auto; /* Centraliza o botão horizontalmente */
+  background-color: #e41313;
 }
 
-ion-card{
+/* Efeito hover */
+.button-salvar:hover,
+.button-excluir:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cor mais clara no hover */
+.button-salvar:hover {
+  background-color: #ff9c3a;
+}
+
+.button-excluir:hover {
+  background-color: #ff4d4d;
+}
+
+/* Altura e espaçamento dos cards */
+ion-card {
   height: 100px;
   margin-bottom: 34px;
 }
 
+/* Espaçamento adicional para os botões */
 .button-salvar {
-  background-color: #ee861d;
   margin-bottom: 9px;
   margin-top: 10px;
-}
-
-.button-excluir {
-  background-color: #e41313; /* Cor personalizada para o botão excluir */
-}
-
-.button-salvar:hover,
-.button-excluir:hover {
-  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-.button-salvar:hover {
-  background-color: #ff9c3a; /* Torna a cor um pouco mais clara no hover */
-}
-
-.button-excluir:hover {
-  background-color: #ff4d4d; /* Torna a cor um pouco mais clara no hover */
 }

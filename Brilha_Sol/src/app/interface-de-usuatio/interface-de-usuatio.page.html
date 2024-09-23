@@ -16,7 +16,7 @@
   <ion-card id="meu-painel">
     <ion-card-content>
       <p>Olá, Nome do Usuário</p>
-      <ion-button routerLink="/home">Sair</ion-button>
+      <ion-button class="round-button" routerLink="/home">Sair</ion-button>
     </ion-card-content>
   </ion-card>
 
@@ -38,10 +38,9 @@
     </ion-list>
   </ion-card>
 
- 
 
-
-  <!-- Botões de ação -->
-  <ion-button expand="full" class="button-salvar" style="background-color: #ee861d;">Salvar alterações</ion-button>
-  <ion-button expand="full" class="button-excluir" color="danger">Excluir conta</ion-button>
+  <div class="button-container">
+    <ion-button expand="full" class="button-salvar">Salvar alterações</ion-button>
+    <ion-button expand="full" class="button-excluir" color="danger">Excluir conta</ion-button>
+  </div>
 </ion-content>
