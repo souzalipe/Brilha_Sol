@@ -1,24 +1,32 @@
 ion-item {
-    --background: #ffffff;
-    --border-radius: 10px;
-    --padding-start: 15px;
-    --padding-end: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  }
-  
-  .status {
-    color: #28a745; /* Verde para status "Active" */
-  }
-  
-  .capacity {
-    color: #007bff; /* Azul para capacidade */
-  }
-  
-  ion-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
+  --background: #ffffff;
+  --border-radius: 10px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.status {
+  color: #28a745; /* Verde para status "Active" */
+}
+
+.capacity {
+  color: #007bff; /* Azul para capacidade */
+}
+
+/* Aumentando o tamanho do ion-avatar */
+ion-avatar {
+  width: 100px; /* Ajuste esse valor conforme necessário */
+  height: 100px; /* Ajuste esse valor conforme necessário */
+}
+
+ion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.nome_prod{
+  margin-bottom: 10px;
+}
