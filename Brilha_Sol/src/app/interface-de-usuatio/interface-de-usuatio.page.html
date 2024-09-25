@@ -1,0 +1,46 @@
+<ion-header class="custom-header">
+  <ion-toolbar>
+    <ion-buttons class="header" slot="end">
+      <ion-button>
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar Icon" style="width: 30px; height: 30px; border-radius: 50%;" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Brilha Sol</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content id="main-content" class="ion-padding">
+  <ion-card id="meu-painel">
+    <ion-card-content>
+      <p>Olá, Nome do Usuário</p>
+      <ion-button class="round-button" routerLink="/home">Sair</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="pedidos">
+    <ion-list>
+      <ion-item>
+        <ion-label>Pedido #1234</ion-label>
+        <ion-note slot="end">R$ 99,99</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label>Rua Exemplo, 123</ion-label>
+        <ion-note slot="end">CEP: 00000-000</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+  <div class="button-container">
+    <ion-button expand="full" class="button-salvar">Salvar alterações</ion-button>
+    <ion-button expand="full" class="button-excluir" color="danger">Excluir conta</ion-button>
+  </div>
+</ion-content>

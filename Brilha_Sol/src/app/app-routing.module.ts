@@ -14,7 +14,13 @@ const routes: Routes = [
   {
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
-  },  {
+  },
+  {
+    path: 'interface-de-usuatio',
+    loadChildren: () => import('./interface-de-usuatio/interface-de-usuatio.module').then( m => m.InterfaceDeUsuatioPageModule)
+  },
+
+  {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
