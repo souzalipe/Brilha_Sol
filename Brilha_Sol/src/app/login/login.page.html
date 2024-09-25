@@ -10,6 +10,7 @@
 
       <ion-card-header>
         <ion-card-title>Que bom que você <br>voltou</ion-card-title>
+        <ion-button class="btn-google" expand="block" style="--background: #4d7ceb; --color: #fff;">Entrar com Google</ion-button>
       </ion-card-header>
 
 
@@ -30,9 +31,10 @@
 
       <ion-item lines="none" class="content">
         <ion-text>
-          <p>
-            Não tem uma conta? <a href="#"><strong>Cadastre-se</strong></a>
-          </p>
+        <p>
+  Não tem uma conta? 
+  <a [routerLink]="['/cadastro']"><strong>Cadastre-se</strong></a>
+</p>
         </ion-text>
       </ion-item>
       <ion-item lines="none" class="content">
