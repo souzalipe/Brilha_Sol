@@ -1,16 +1,17 @@
- <ion-content>
+<ion-content>
   <ion-card class="conteiner">
 
     <ion-card-content class="card">
 
-      
+
       <div class="conteiner_icon">
-        <ion-img  class="icon_sol"  src="../../assets/icon/favicon.ico"></ion-img>
+        <ion-img class="icon_sol" src="../../assets/icon/favicon.ico"></ion-img>
       </div><br>
 
       <ion-card-header>
         <ion-card-title>Que bom que você <br>voltou</ion-card-title>
-        <ion-button class="btn-google" expand="block" style="--background: #4d7ceb; --color: #fff;">Entrar com Google</ion-button>
+        <ion-button class="btn-google" expand="block" style="--background: #4d7ceb; --color: #fff;">Entrar com
+          Google</ion-button>
       </ion-card-header>
 
 
@@ -26,23 +27,15 @@
 
       <div id="msgError"></div>
 
-      <ion-button class="btn-entrar" expand="block" style="--background: #ee861d; --color: #fff;">Entrar</ion-button>
+      <ion-button shape="round" class="btn-entrar">Entrar</ion-button>
+
 
 
       <ion-item lines="none" class="content">
         <ion-text>
-        <p>
-  Não tem uma conta? 
-  <a [routerLink]="['/cadastro']"><strong>Cadastre-se</strong></a>
-</p>
+          <p>
+            Não tem uma conta?
+            <a [routerLink]="['/cadastro']"><strong>Cadastre-se</strong></a>
+          </p>
         </ion-text>
       </ion-item>
-      <ion-item lines="none" class="content">
-        <ion-text>
-            <hr>
-        </ion-text>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
-

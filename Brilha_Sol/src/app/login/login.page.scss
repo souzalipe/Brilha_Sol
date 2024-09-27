@@ -2,119 +2,125 @@
 
 * {
     margin: 0;
-    
-  }
-  
-  .conteiner {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+.conteiner {
     display: flex;
     justify-content: center;
     width: 100%;
-    // margin-top: 100px;
-    font-family: "Libre Franklin", sans-serif;
-  }
-  
+    background-color: transparent; /* Garantir que o fundo do contêiner seja transparente */
+    margin-top: 50px; /* Ajustar conforme necessário */
+}
 
-
-  .card {
+.card {
     background-color: #fff;
     padding: 30px;
     border-radius: 4%;
-    margin-top: 1px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    margin-top: 10px;
     margin-bottom: 135px;
-  }
-  
-  .icon_sol{
+}
+
+.icon_sol {
     height: 60px;
-  }
+}
 
-  .conteiner_icon{
-    margin-bottom: 0px;
-    height: 50px;
-  }
+.conteiner_icon {
+    margin-bottom: 20px;
+}
 
-  ion-card-title {
+ion-card-title {
     text-align: center;
     margin-bottom: 20px;
     color: #5d5d5d;
     font-weight: 700;
     font-size: 29px;
-  }
-  
-  ion-item {
+}
+
+ion-item {
     --highlight-height: 0;
     --background: none;
     --min-height: 0;
     margin-bottom: 20px;
-  }
-  
-  ion-label {
+}
+
+ion-label {
     color: #5d5d5d;
     position: relative;
     padding-top: 13px;
     margin-bottom: 5%;
     margin-top: 5%;
-  }
-  
-  .label ion-input {
+}
+
+.label ion-input {
     padding: 5px 5px;
     border: 0;
     border-bottom: 2px solid #5d5d5d;
     background-color: transparent;
     outline: none;
-    min-width: 100px;
+    width: 100%; /* Ajuste para ocupar a largura total */
     transition: all .3s ease-out;
     border-radius: 0;
-  }
-  
-  .label ion-input:focus {
+}
+
+.label ion-input:focus {
     border-bottom: 2px solid #5d5d5d;
-  }
-  
-  .label {
-    color: #5d5d5d;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transform: all .3s ease-out;
-  }
-  
-  .label ion-input:focus {
-    font-size: 13px;
-    margin-top: 0;
-    color: #5d5d5d;
-  }
-  
-  .btn-entrar {
-    background-color: #ee861d;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-  .btn-google {
-    color: #fff;
-    margin-bottom: 15px;
-    border: radius 50px;
-  }
+}
 
-
-  .btn-entrar:hover  {
-    background-color: #f17430;
-  }
-
-  p{
-    color: #5d5d5d;
-  }
-
-  a{
+.btn-entrar {
+    color: white; /* Cor do texto */
+    border: none; /* Remover bordas */
+    padding: 10px 20px; /* Ajuste do espaçamento interno */
+    text-align: center;
     text-decoration: none;
-    color:#ee861d;
-    font-weight: bold;
-  }
+    display: block;
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-size: 16px;
+    border-radius: 25px; /* Arredondar o botão */
+    transition: background-color 0.3s ease; /* Transição suave */
+    margin-top: 20px;
+}
 
-  hr{
-    background-color: #5d5d5d !important;
-  }
-  
-  p{
+
+
+.btn-google {
+    background-color: #4d7ceb; /* Cor de fundo do botão Google */
+    color: #fff; /* Cor do texto */
+    margin-bottom: 15px;
+    border-radius: 25px; /* Tornar o botão Google arredondado */
+}
+
+p {
+    color: #5d5d5d;
     margin-top: 13px;
-   margin-left: 30px;
-  }
+    margin-left: 30px;
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: #4d7ceb;
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+}
+
+
+hr {
+    background-color: #5d5d5d !important;
+    height: 1px;
+    border: none;
+    margin: 20px 0;
+}
+
+.content {
+    text-align: center;
+}
+

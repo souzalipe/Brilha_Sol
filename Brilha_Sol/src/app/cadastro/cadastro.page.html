@@ -4,58 +4,74 @@
     <ion-card-content class="card">
 
       <div class="conteiner_icon">
-        <ion-img  class="icon_sol"  src="../../assets/icon/favicon.ico"></ion-img>
+        <ion-img class="icon_sol" src="../../assets/icon/favicon.ico"></ion-img>
       </div><br>
 
       <ion-card-header>
         <ion-card-title>Seja Bem vindo</ion-card-title>
       </ion-card-header>
 
-
+      <!-- Nome -->
       <ion-item>
-        <ion-label class="label" position="floating">Nome</ion-label>
-        <ion-input type="text" id="usuario" required></ion-input>
+        <ion-input label="Nome" label-placement="floating" fill="outline" placeholder="Digite seu nome"></ion-input>
       </ion-item>
 
+      <!-- Email -->
       <ion-item>
-        <ion-label class="label" position="floating">Email</ion-label>
-        <ion-input type="Email" id="Email" required></ion-input>
+        <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Digite seu email"></ion-input>
       </ion-item>
 
+      <!-- CPF -->
       <ion-item>
-        <ion-label class="label" position="floating">CPF</ion-label>
-        <ion-input type="text" id="CPF" required></ion-input>
+        <ion-input label="CPF" label-placement="floating" fill="outline" placeholder="Digite seu CPF"></ion-input>
       </ion-item>
 
+      <!-- CEP -->
       <ion-item>
-        <ion-label class="label" position="floating">Telefone</ion-label>
-        <ion-input type="text" id="telefone" required></ion-input>
+        <ion-input label="CEP" label-placement="floating" fill="outline" placeholder="Digite seu CEP"></ion-input>
       </ion-item>
 
+      <!-- Rua -->
       <ion-item>
-        <ion-label class="label" position="floating">Senha</ion-label>
-        <ion-input type="password" id="senha" maxlength="8" required></ion-input>
+        <ion-input label="Rua" label-placement="floating" fill="outline" placeholder="Digite sua Rua"></ion-input>
+      </ion-item>
+
+      <!-- Número -->
+      <ion-item>
+        <ion-input label="Número" label-placement="floating" fill="outline" placeholder="Digite o número"></ion-input>
+      </ion-item>
+
+      <!-- Telefone -->
+      <ion-item>
+        <ion-input label="Telefone" label-placement="floating" fill="outline" placeholder="Digite seu telefone"></ion-input>
+      </ion-item>
+
+      <!-- Senha -->
+      <ion-item>
+        <ion-input label="Senha" label-placement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
       </ion-item>
 
       <div id="msgError"></div>
 
-      <ion-button class="btn-entrar" expand="block" style="--background: #ee861d; --color: #fff;">Cadastra-se</ion-button>
+      <ion-button shape="round" class="btn-entrar">Cadastre-se</ion-button>
+
+      <ion-button shape="round"  class="btn-entrar">Entrar com Google</ion-button>
+
 
 
       <ion-item lines="none" class="content">
         <ion-text>
           <p>
-            Já tem uma conta? <a [routerLink]="['/login']"><strong>Entre aqui</strong></a>
+            Já tem uma conta?&nbsp;<a [routerLink]="['/login']"><strong>Entre aqui</strong></a>
           </p>
-        </ion-text>        
+        </ion-text>
       </ion-item>
+
       <ion-item lines="none" class="content">
         <ion-text>
-            <hr>
+          <hr>
         </ion-text>
       </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
-
-
