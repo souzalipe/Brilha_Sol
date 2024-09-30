@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';  // Verifique o import de @Input
-import { ModalController } from '@ionic/angular';          // Import correto do ModalController
-import { CartService } from '../cart.service'; // Certifique-se de que o caminho esteja correto
+import { Component, Input, OnInit } from '@angular/core';  
+import { ModalController } from '@ionic/angular';         
+import { CartService } from '../cart.service'; 
 
 @Component({
   selector: 'app-product-modal',
@@ -9,13 +9,13 @@ import { CartService } from '../cart.service'; // Certifique-se de que o caminho
 })
 export class ProductModalComponent implements OnInit {
 
-  @Input() product: any;  // Produto recebido da página principal
+  @Input() product: any;  
   quantity: number = 1;
 
   constructor(private modalController: ModalController, private cartService: CartService) {}
 
   ngOnInit() {
-    // Inicialização se necessário
+    
   }
 
   closeModal() {

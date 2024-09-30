@@ -8,22 +8,21 @@ ion-item {
 }
 
 .status {
-  color: #28a745; /* Verde para status "Active" */
+  color: #28a745; 
 }
-/* Aumentando o tamanho do ícone do carrinho */
 .cart {
   margin-right: 10px;
-  font-size: 22px; /* Altere o valor para o tamanho desejado */
+  font-size: 22px; 
 }
 
 .capacity {
-  color: #007bff; /* Azul para capacidade */
+  color: #007bff; 
 }
 
-/* Aumentando o tamanho do ion-avatar */
+
 ion-avatar {
-  width: 100px; /* Ajuste esse valor conforme necessário */
-  height: 100px; /* Ajuste esse valor conforme necessário */
+  width: 100px; 
+  height: 100px; 
 }
 
 ion-avatar img {
