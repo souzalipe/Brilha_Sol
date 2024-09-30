@@ -10,6 +10,11 @@ ion-item {
 .status {
   color: #28a745; /* Verde para status "Active" */
 }
+/* Aumentando o tamanho do ícone do carrinho */
+.cart {
+  margin-right: 10px;
+  font-size: 22px; /* Altere o valor para o tamanho desejado */
+}
 
 .capacity {
   color: #007bff; /* Azul para capacidade */
