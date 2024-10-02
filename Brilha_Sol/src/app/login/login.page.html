@@ -1,19 +1,16 @@
 <ion-content>
   <ion-card class="conteiner">
-
     <ion-card-content class="card">
-
-
       <div class="conteiner_icon">
         <ion-img class="icon_sol" src="../../assets/icon/favicon.ico"></ion-img>
       </div><br>
 
       <ion-card-header>
         <ion-card-title>Que bom que você <br>voltou</ion-card-title>
-        <ion-button class="btn-google" expand="block" style="--background: #4d7ceb; --color: #fff;">Entrar com
-          Google</ion-button>
+        <ion-button (click)="loginWithGoogle()" class="btn-google" expand="block" style="--background: #4d7ceb; --color: #fff;">
+          Entrar com Google
+        </ion-button>
       </ion-card-header>
-
 
       <ion-item>
         <ion-label class="label" position="floating">Email</ion-label>
@@ -29,8 +26,6 @@
 
       <ion-button shape="round" class="btn-entrar">Entrar</ion-button>
 
-
-
       <ion-item lines="none" class="content">
         <ion-text>
           <p>
@@ -39,3 +34,6 @@
           </p>
         </ion-text>
       </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
