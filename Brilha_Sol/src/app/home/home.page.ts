@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular'; 
+import { ModalController, NavController } from '@ionic/angular'; 
 import { ProductModalComponent } from '../product-modal/product-modal.component';
-import { CartPage } from '../cart/cart.page'; // Importa o CartPage para usar como modal
+import { CartPage } from '../cart/cart.page'; 
 
 interface Product {
   name: string;
@@ -27,7 +27,8 @@ export class HomePage {
   ];
 
   constructor(
-    private modalController: ModalController 
+    private modalController: ModalController,
+    private navCtrl: NavController 
   ) {}
 
   async openProductModal(product: Product) { 
@@ -40,8 +41,13 @@ export class HomePage {
 
   async openCartModal() {
     const modal = await this.modalController.create({
-      component: CartPage // Abre CartPage como modal
+      component: CartPage 
     });
     return await modal.present();
+  }
+
+
+  goToUserPage() {
+    this.navCtrl.navigateForward('/interface-de-usuatio'); 
   }
 }

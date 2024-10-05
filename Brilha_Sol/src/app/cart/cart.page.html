@@ -15,9 +15,13 @@
       </ion-thumbnail>
       <ion-label>
         <h2>{{ item.product.name }}</h2>
-        <p>Quantidade: {{ item.quantity }}</p>
-        <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p> <!-- Exibe o subtotal calculado -->
+
+        <!-- Exibe a quantidade e o subtotal -->
+        <ion-input [(ngModel)]="item.quantity" type="number" min="1" (ionChange)="updateQuantity(item)"></ion-input> <!-- Campo para editar a quantidade -->
+        <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p>
       </ion-label>
+      
+   
     </ion-item>
   </ion-list>
 

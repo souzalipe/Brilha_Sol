@@ -7,16 +7,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-img [src]="product.image"></ion-img>
-  <ion-item>
-    <ion-label>Valor: R$ {{ product.valor }}</ion-label>
-  </ion-item>
+<ion-content class="ion-padding">
+  <div class="modal-wrapper">
+    <img [src]="product.image" alt="{{ product.name }}" />
 
-  <ion-item>
-    <ion-label>Quantidade</ion-label>
-    <ion-input type="number" [(ngModel)]="quantity"></ion-input>
-  </ion-item>
+    <p>Valor: R$ {{ product.valor }}</p>
+    
+    <ion-item>
+      <ion-label>Quantidade:</ion-label>
+      <ion-input type="number" [(ngModel)]="quantity"></ion-input>
+    </ion-item>
 
-  <ion-button expand="block" (click)="addToCart()">Adicionar ao Carrinho</ion-button>
+    <ion-button expand="block" (click)="addToCart()">Adicionar ao Carrinho</ion-button>
+  </div>
 </ion-content>

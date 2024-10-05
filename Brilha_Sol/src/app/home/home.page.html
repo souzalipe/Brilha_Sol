@@ -3,13 +3,13 @@
     <ion-title>Brilha Sol</ion-title>
 
     <ion-buttons slot="end">
-      <!-- Botão do carrinho que abre o modal -->
+     
       <ion-button (click)="openCartModal()">
         <ion-icon class="cart" name="cart"></ion-icon>
       </ion-button>
 
-      <!-- Botão do usuário -->
-      <ion-button>
+
+      <ion-button (click)="goToUserPage()"> 
         <ion-icon name="person"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -19,7 +19,7 @@
 <ion-content [fullscreen]="true">
   <app-maps></app-maps>
 
-  <!-- Lista de produtos -->
+ 
   <ion-list>
     <ion-item *ngFor="let plant of plants" lines="none" (click)="openProductModal(plant)">
       <ion-avatar slot="start">

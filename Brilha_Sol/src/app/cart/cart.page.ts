@@ -9,7 +9,7 @@ interface CartItem {
     valor: string; 
   };
   quantity: number;
-  subtotal?: number; // Adicionando o campo subtotal
+  subtotal?: number; 
 }
 
 @Component({
@@ -27,17 +27,24 @@ export class CartPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // Obtém os itens do carrinho
+  
     this.cartItems = this.cartService.getCart();
 
-    // Calcula o subtotal de cada item
+
     this.cartItems.forEach(item => {
       const valorNumerico = parseFloat(item.product.valor.replace(',', '.'));
       item.subtotal = valorNumerico * item.quantity;
     });
 
-    // Calcula o valor total do carrinho
+
     this.calculateTotal();
+  }
+
+  
+  updateQuantity(item: CartItem) {
+    const valorNumerico = parseFloat(item.product.valor.replace(',', '.'));
+    item.subtotal = valorNumerico * item.quantity; 
+    this.calculateTotal(); 
   }
 
   calculateTotal() {
