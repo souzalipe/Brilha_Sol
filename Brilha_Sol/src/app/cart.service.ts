@@ -15,17 +15,12 @@ export class CartService {
 
   constructor() { }
 
-  
   addProduct(product: any, quantity: number) {
-    
     const existingProduct = this.cart.find(item => item.product.name === product.name);
-
     if (existingProduct) {
-      
       existingProduct.quantity += quantity;
     } else {
-      
-      this.cart.push({ product, quantity }); 
+      this.cart.push({ product, quantity });
     }
   }
 
@@ -38,10 +33,7 @@ export class CartService {
   getTotal() {
     return this.cart.reduce((total, item) => {
       const price = parseFloat(item.product.valor.replace(',', '.'));
-      if (!isNaN(price)) {  
-        return total + (price * item.quantity);
-      }
-      return total;
+      return total + (price * item.quantity);
     }, 0);
   }
 }
