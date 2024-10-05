@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Seu Carrinho</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fechar</ion-button> <!-- Botão para fechar o modal -->
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +16,7 @@
       <ion-label>
         <h2>{{ item.product.name }}</h2>
         <p>Quantidade: {{ item.quantity }}</p>
-        <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p>
+        <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p> <!-- Exibe o subtotal calculado -->
       </ion-label>
     </ion-item>
   </ion-list>
