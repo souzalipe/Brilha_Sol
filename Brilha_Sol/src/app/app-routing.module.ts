@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'splash',  // Redirecionar para a splash como página inicial
+    redirectTo: 'splash', 
     pathMatch: 'full'
   },
   {
@@ -21,13 +21,18 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'interface-de-usuario',
+    path: 'interface-de-usuatio',
     loadChildren: () => import('./interface-de-usuatio/interface-de-usuatio.module').then( m => m.InterfaceDeUsuatioPageModule)
   },
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

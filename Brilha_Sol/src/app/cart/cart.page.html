@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Seu Carrinho</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fechar</ion-button> <!-- Botão para fechar o modal -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems">
+      <ion-thumbnail slot="start">
+        <img [src]="item.product.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.product.name }}</h2>
+
+        <!-- Exibe a quantidade e o subtotal -->
+        <ion-input [(ngModel)]="item.quantity" type="number" min="1" (ionChange)="updateQuantity(item)"></ion-input> <!-- Campo para editar a quantidade -->
+        <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p>
+      </ion-label>
+      
+   
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Total: R$ {{ total | number:'1.2-2' }}</ion-label>
+  </ion-item>
+</ion-content>

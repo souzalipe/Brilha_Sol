@@ -1,24 +1,26 @@
 <ion-header class="custom-header">
   <ion-toolbar>
-    <ion-buttons class="header" slot="end">
-      <ion-icon class="cart" name="cart"></ion-icon>
+    <ion-title>Brilha Sol</ion-title>
 
-      <ion-button>
+    <ion-buttons slot="end">
+     
+      <ion-button (click)="openCartModal()">
+        <ion-icon class="cart" name="cart"></ion-icon>
+      </ion-button>
+
+
+      <ion-button (click)="goToUserPage()"> 
         <ion-icon name="person"></ion-icon>
       </ion-button>
     </ion-buttons>
-
-    <ion-title>Brilha Sol</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <app-maps></app-maps>
-  
-  <!-- Lista de produtos -->
+
+ 
   <ion-list>
-    <!-- Adicionando evento de clique para abrir o modal -->
     <ion-item *ngFor="let plant of plants" lines="none" (click)="openProductModal(plant)">
       <ion-avatar slot="start">
         <img [src]="plant.image" />

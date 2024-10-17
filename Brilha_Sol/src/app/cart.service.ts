@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 
 
 interface CartItem {
-  product: any; 
+  product: {
+    image: string;
+    name: string;
+    valor: string;
+  };
   quantity: number;
 }
 
@@ -10,38 +14,28 @@ interface CartItem {
   providedIn: 'root',
 })
 export class CartService {
-  
   private cart: CartItem[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  
+
   addProduct(product: any, quantity: number) {
-    
     const existingProduct = this.cart.find(item => item.product.name === product.name);
-
     if (existingProduct) {
-      
-      existingProduct.quantity += quantity;
+      existingProduct.quantity += quantity; 
     } else {
-      
-      this.cart.push({ product, quantity }); 
+      this.cart.push({ product, quantity });
     }
   }
 
-  
-  getCart() {
+  getCart(): CartItem[] {
     return this.cart;
   }
 
-  
-  getTotal() {
+  getTotal(): number {
     return this.cart.reduce((total, item) => {
       const price = parseFloat(item.product.valor.replace(',', '.'));
-      if (!isNaN(price)) {  
-        return total + (price * item.quantity);
-      }
-      return total;
+      return total + (price * item.quantity);
     }, 0);
   }
 }
