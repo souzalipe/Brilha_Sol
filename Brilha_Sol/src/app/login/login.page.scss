@@ -87,11 +87,23 @@ ion-label {
     margin-top: 20px;
 }
 
+ion-button {
+    border-radius: 30px;
+    width: 290px;
+    display: flex;
+    align-items: center;
+}
 
+i {
+    margin-right: 5px;
+    color: #ffffff;
+}
 
 .btn-google {
     background-color: #4d7ceb; /* Cor de fundo do botão Google */
     color: #fff; /* Cor do texto */
+    width: 240px;
+    margin-left: 50px;
     margin-bottom: 15px;
     border-radius: 25px; /* Tornar o botão Google arredondado */
 }
