@@ -29,6 +29,7 @@ body {
 
 .icon_sol {
     height: 60px;
+    margin-top:10px ;
 }
 
 .conteiner_icon {
@@ -137,6 +138,9 @@ ion-content{
     display: flex;
     align-items: center;
     flex-direction: column;
-    
 }
 
+ion-input{
+    height: 60px;
+    color: #4d7ceb;
+}
