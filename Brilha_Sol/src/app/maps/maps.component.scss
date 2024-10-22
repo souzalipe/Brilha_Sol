@@ -1,7 +1,16 @@
 .link {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    color: #000000;
+}
+
+div{
+    background-color: #49F5A9;
+    width: 300px;
+    margin-left: 36px;
+    align-items: center;
+    justify-content: center;
 }
