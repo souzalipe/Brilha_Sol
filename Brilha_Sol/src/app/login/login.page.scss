@@ -1,146 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Aplicar a fonte globalmente */
 body {
-    font-family: "Libre Franklin", sans-serif;
+  font-family: 'Fredoka','Reem Kufi', sans-serif;
 }
 
-.conteiner {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: transparent; /* Garantir que o fundo do contêiner seja transparente */
-    margin-top: 50px; /* Ajustar conforme necessário */
-}
-
-.card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 4%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-    margin-top: 10px;
-    margin-bottom: 135px;
-}
-
-.icon_sol {
-    height: 60px;
-    margin-top:10px ;
-}
-
-.conteiner_icon {
-    margin-bottom: 10px;
-}
-
+/* Ou aplicar a fontes específicas */
 ion-card-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #5d5d5d;
-    font-weight: 700;
-    font-size: 29px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 700; /* Exemplo de peso */
+  font-size: 30px; /* Tamanho padrão do texto */
+  text-align: center; /* Centraliza o texto */
+  color: #433b3bc1;
 }
 
-ion-item {
-    --highlight-height: 0;
-    --background: none;
-    --min-height: 0;
-    margin-bottom: 20px;
+/* Responsividade para tamanhos de tela menores */
+@media (max-width: 768px) {
+  ion-card-title {
+    font-size: 24px; /* Tamanho reduzido para tablets e telas menores */
+  }
 }
 
-ion-label {
-    color: #5d5d5d;
-    position: relative;
-    padding-top: 13px;
-    margin-bottom: 5%;
-    margin-top: 5%;
+@media (max-width: 480px) {
+  ion-card-title {
+    font-size: 30px; /* Tamanho ainda mais reduzido para smartphones */
+  }
 }
 
-.label ion-input {
-    padding: 5px 5px;
-    border: 0;
-    border-bottom: 2px solid #5d5d5d;
-    background-color: transparent;
-    outline: none;
-    width: 100%; /* Ajuste para ocupar a largura total */
-    transition: all .3s ease-out;
-    border-radius: 0;
+ion-card-subtitle {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 400; /* Exemplo de peso */
 }
-
-.label ion-input:focus {
-    border-bottom: 2px solid #5d5d5d;
-}
-
-.btn-entrar {
-    color: white; /* Cor do texto */
-    border: none; /* Remover bordas */
-    padding: 10px 20px; /* Ajuste do espaçamento interno */
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    width: 100%; /* Ocupa toda a largura disponível */
-    font-size: 16px;
-    border-radius: 25px; /* Arredondar o botão */
-    transition: background-color 0.3s ease; /* Transição suave */
-    margin-top: 20px;
-}
-
-ion-button {
-    border-radius: 30px;
-    width: 290px;
-    display: flex;
-    align-items: center;
-}
-
-i {
-    margin-right: 5px;
-    color: #ffffff;
-}
-
 
 .btn-google {
-    background-color: #f7f12f; /* Cor de fundo do botão Google */
-    color: #fff; /* Cor do texto */
-    width: 240px;
-    margin-left: 70px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    border-radius: 25px; /* Tornar o botão Google arredondado */
+  font-family: 'Libre Franklin', sans-serif;
+  --background: #22a4f5;
+  --color: #ffffff;
+  --border-radius: 25px; /* Bordas arredondadas */
+  --padding: 8px 20px; /* Espaçamento interno do botão */
+  font-size: 14px; /* Tamanho da fonte menor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Largura menor */
+  height: 40px; /* Altura do botão */
 }
 
-p {
-    color: #5d5d5d;
-    margin-top: 13px;
-    margin-left: 30px;
-    font-size: large;
+.btn-google i {
+  margin-right: 8px; /* Espaçamento entre ícone e texto */
+  font-size: 18px; /* Tamanho do ícone */
+  color: #f6f479;
 }
 
-a {
-    text-decoration: none;
-    font-size: large;
-    color: #4d7ceb;
-    font-weight: bold;
-    letter-spacing: 1px; /* Espaçamento entre as letras */
+.btn-google:hover {
+  --background: #1d93d9; /* Altera a cor de fundo no hover */
 }
 
-
-hr {
-    background-color: #5d5d5d !important;
-    height: 1px;
-    border: none;
-    margin: 20px 0;
+.btn-google:active {
+  transform: scale(0.95); /* Efeito de clique */
 }
 
-ion-content{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.content-background {
+  --background: url('../../assets/fundo-login.jpeg') no-repeat center center / cover;
+  height: 100%;
+  background-attachment: fixed; /* Para fixar o fundo enquanto rola */
 }
 
-ion-input{
-    height: 60px;
-    color: #4d7ceb;
+ion-card {
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  padding: 16px; /* Espaçamento interno */
+  background-color: #e1d9d9b8; /* Cor de fundo do card */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave para hover */
+  
+  position: fixed; /* Fixa o card na posição */
+  top: 250px;
+  left: 47%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o deslocamento para alinhar ao centro */
+  width: 90%; /* Largura do card, adaptável para telas menores */
+  max-width: 450px; /* Limita a largura máxima */
+  
+  display: flex; /* Usar flexbox para centralizar conteúdo */
+  flex-direction: column; /* Direção da coluna para empilhar o título e o botão */
+  align-items: center; /* Alinha os itens ao centro */
+}
+
+ion-icon {
+  height: 37px;
+  width: 37px;
+  margin-left: 5px;
+  color: #3b3131c2;
+}
+
+.header-container {
+  display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }

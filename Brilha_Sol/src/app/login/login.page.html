@@ -1,47 +1,14 @@
-<ion-content>
-
-  <ion-card-header>
-    <div class="conteiner_icon">
-      <ion-img class="icon_sol" src="../../assets/icon/favicon.ico"></ion-img>
-    </div><br>
-    <ion-card-title>Que bom que você <br>voltou</ion-card-title>
-
-
-
-  </ion-card-header>
-
-  <ion-item>
-    <ion-label class="label" position="floating">Email</ion-label>
-    <ion-input type="Email" id="usuario" required></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label class="label" position="floating">Senha</ion-label>
-    <ion-input type="password" id="senha" maxlength="8" required></ion-input>
-  </ion-item>
-
-  <div id="msgError"></div>
-
-  <ion-button shape="round" class="btn-entrar">Entrar</ion-button>
-
-  <ion-button (click)="loginWithGoogle()" class="btn-google"
-    style="--background: #22a4f5dd; --color: #fff; display: flex; justify-content: center; align-items: center;">
-    <i class="fab fa-google" slot="start"></i>
-    Entrar com Google
-  </ion-button>
-
-
-
-  <ion-text>
-      <p>
-        Não tem uma conta?
-        <a [routerLink]="['/cadastro']"><strong>Cadastre-se</strong></a>
-      </p>
-  </ion-text>
+<ion-content class="content-background">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Seja Bem vindo ! <ion-icon name="partly-sunny-outline"></ion-icon></ion-card-title> 
+    </ion-card-header>
   
+    <ion-button (click)="loginWithGoogle()" class="btn-google" fill="solid">
+      <i class="fab fa-google"></i>
+      Entrar com Google
+    </ion-button>
+    
 
-  <ion-footer>
-    <img  class="footer1" src="../../assets/footer1.png" />
-  </ion-footer>
-
+  </ion-card>
 </ion-content>
