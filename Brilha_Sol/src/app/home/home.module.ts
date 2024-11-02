@@ -5,16 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MapsComponent } from '../maps/maps.component';
-
+import { ProductModalComponent } from '../product-modal/product-modal.component';
+import { CartService } from '../cart.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-
     HomePageRoutingModule
   ],
-  declarations: [HomePage, MapsComponent]
+  declarations: [
+    HomePage,
+    MapsComponent,
+    ProductModalComponent 
+  ],
+  providers: [
+    CartService 
+  ]
 })
 export class HomePageModule {}

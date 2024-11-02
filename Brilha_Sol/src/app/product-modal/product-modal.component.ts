@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { CartService } from '../cart.service'; 
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-modal',
   templateUrl: './product-modal.component.html',
+  styleUrls: ['./product-modal.component.scss'],
 })
 export class ProductModalComponent {
   @Input() product: any; 
@@ -12,7 +13,7 @@ export class ProductModalComponent {
 
   constructor(
     private modalController: ModalController,
-    private cartService: CartService 
+    private cartService: CartService
   ) {}
 
 
@@ -20,9 +21,9 @@ export class ProductModalComponent {
     this.modalController.dismiss();
   }
 
-
+  
   addToCart() {
-    this.cartService.addProduct(this.product, this.quantity); 
+    this.cartService.addProduct(this.product, this.quantity);
     this.closeModal(); 
   }
 }

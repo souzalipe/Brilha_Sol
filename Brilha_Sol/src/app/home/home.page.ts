@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular'; 
 import { ProductModalComponent } from '../product-modal/product-modal.component';
-import { CartPage } from '../cart/cart.page'; 
+import { CartPage } from '../cart/cart.page';
+ import { CartService } from '../cart.service';
 
 interface Product {
   name: string;
@@ -25,12 +26,13 @@ export class HomePage {
     { name: 'Estação Solar Portátil Autônoma 3 Lâmpadas E Carregamento', valor: "259,90", image: '../../assets/placa7.webp' },
     { name: 'Painel Solar 12v 20w Policristalino Fotovoltaico (placa)', valor: "149,99", image: '../../assets/placa8.webp' }
   ];
-
   constructor(
     private modalController: ModalController,
-    private navCtrl: NavController 
+    private navCtrl: NavController,
+    private cartService: CartService
   ) {}
 
+ 
   async openProductModal(product: Product) { 
     const modal = await this.modalController.create({
       component: ProductModalComponent,
@@ -39,15 +41,11 @@ export class HomePage {
     return await modal.present();
   }
 
+  
   async openCartModal() {
     const modal = await this.modalController.create({
       component: CartPage 
     });
     return await modal.present();
-  }
-
-
-  goToUserPage() {
-    this.navCtrl.navigateForward('/interface-de-usuatio'); 
   }
 }

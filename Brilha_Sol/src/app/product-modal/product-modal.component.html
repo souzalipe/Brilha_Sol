@@ -15,7 +15,7 @@
     
     <ion-item>
       <ion-label>Quantidade:</ion-label>
-      <ion-input type="number" [(ngModel)]="quantity"></ion-input>
+      <ion-input type="number" [(ngModel)]="quantity" min="1"></ion-input>
     </ion-item>
 
     <ion-button expand="block" (click)="addToCart()">Adicionar ao Carrinho</ion-button>
