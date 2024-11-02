@@ -1,14 +1,10 @@
 <ion-header class="custom-header">
   <ion-toolbar>
     <ion-title>Brilha Sol</ion-title>
-
     <ion-buttons slot="end">
-     
       <ion-button (click)="openCartModal()">
         <ion-icon class="cart" name="cart"></ion-icon>
       </ion-button>
-
-
       <ion-button (click)="goToUserPage()"> 
         <ion-icon name="person"></ion-icon>
       </ion-button>
@@ -18,8 +14,7 @@
 
 <ion-content [fullscreen]="true">
   <app-maps></app-maps>
-
- 
+  
   <ion-list>
     <ion-item *ngFor="let plant of plants" lines="none" (click)="openProductModal(plant)">
       <ion-avatar slot="start">
@@ -31,25 +26,30 @@
       </ion-label>
     </ion-item>
   </ion-list>
-</ion-content>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
-      <ion-icon name="play-circle"></ion-icon>
-      Listen Now
-    </ion-tab-button>
-    <ion-tab-button tab="radio">
-      <ion-icon name="radio"></ion-icon>
-      Radio
-    </ion-tab-button>
-    <ion-tab-button tab="library">
-      <ion-icon name="library"></ion-icon>
-      Library
-    </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+
+  <ion-tabs class="menu-fixo">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="cart"></ion-icon> 
+        Compras
+      </ion-tab-button>
+      
+      <ion-tab-button tab="radio">
+        <ion-icon name="map"></ion-icon> 
+        Mapa
+      </ion-tab-button>
+      
+      <ion-tab-button tab="library">
+        <ion-icon name="person"></ion-icon> 
+        Usuário
+      </ion-tab-button>
+      
+      <ion-tab-button tab="search">
+        <ion-icon name="log-out"></ion-icon>
+        Sair
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-content>
+  
