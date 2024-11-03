@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { ModalController, NavController } from '@ionic/angular';
+import { ModalController, NavController, ToastController } from '@ionic/angular'; // Certifique-se de importar o ModalController e ToastController
 import { ProductModalComponent } from '../product-modal/product-modal.component';
 import { CartPage } from '../cart/cart.page';
-import { MapsComponent } from '../maps/maps.component'; // Importe o MapsComponent
 import { CartService } from '../cart.service';
 
 interface Product {
@@ -19,7 +18,7 @@ interface Product {
 export class HomePage {
   plants: Product[] = [
     { name: 'Placa Solar Painel Solar 150w + Manual', valor: "375,10", image: '../../assets/placa.png' },
-    { name: 'Kit Painel Placa Energia Solar 2x155w Caminhão 12ou24 Volts Cor Azul Voltagem De Circuito Aberto 24.46v Voltagem Máxima Do Sistema 20.64v', valor: "875,00", image: '../../assets/placa2.png' },
+    { name: 'Kit Painel Placa Energia Solar 2x155w Caminhão 12ou24 Volts Cor Azul Voltagem De Circuito Aberto 24.46v', valor: "875,00", image: '../../assets/placa2.png' },
     { name: 'Kit Sistema Solar Painel Led A Bateria + 3 Lampadas Portatil', valor: "175,75", image: '../../assets/placa3.png' },
     { name: 'Painel solar portátil Ecoflow 110W', valor: "1.123,30", image: '../../assets/placa4.png' },
     { name: 'Painel Solar Ezviz D 7.2v 4,2w Para Câmera Externa A Bateria', valor: "195,70", image: '../../assets/placa5.png' },
@@ -29,8 +28,8 @@ export class HomePage {
   ];
 
   constructor(
-    private modalController: ModalController,
-    private navCtrl: NavController,
+    private modalController: ModalController, 
+    private toastController: ToastController, 
     private cartService: CartService
   ) {}
 
@@ -49,11 +48,20 @@ export class HomePage {
     return await modal.present();
   }
 
- 
-  async openMapModal() {
-    const modal = await this.modalController.create({
-      component: MapsComponent
+  async openMap() {
+  
+    const toast = await this.toastController.create({
+      message: 'Carregando...',
+      duration: 3000, 
+      position: 'bottom'
     });
-    return await modal.present();
+    toast.present();
+
+    setTimeout(() => {
+      const latitude = -23.55052; 
+      const longitude = -46.633308;
+      const url = `https://www.google.com/maps/search/Painel+Solar/@${latitude},${longitude},15z`;
+      window.open(url, '_blank'); 
+    }, 3000);
   }
 }
