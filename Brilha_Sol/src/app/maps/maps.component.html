@@ -1,5 +1,12 @@
-<div>
-  <a (click)="openMaps()" class="link">
-  Loja Brilha Sol mais próxima de você!
-  </a>
-</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mapa - Brilha Sol</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>O mapa abrirá em uma nova janela com a localização de Brilha Sol.</p>
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-maps',
@@ -7,27 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapsComponent implements OnInit {
 
-  latitude: number = 0;
-  longitude: number = 0;
+  latitude: number = -23.55052;
+  longitude: number = -46.633308;
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
   ngOnInit(): void {
+    this.openMaps();
   }
 
   openMaps(): void {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
+    const url = `https://www.google.com/maps/search/placas+solares/@${this.latitude},${this.longitude},15z`;
+    window.open(url, '_blank'); 
+  }
 
-        const url = `https://www.google.com/maps/search/painel+solar/@${this.latitude},${this.longitude},15z`;
-        window.open(url, '_blank'); 
-      }, () => {
-        alert('Não conseguimos obter sua localização');
-      });
-    } else {
-      alert('Geolocalização não é suportada pelo navegador.');
-    }
+  
+  closeModal(): void {
+    this.modalController.dismiss();
   }
 }
