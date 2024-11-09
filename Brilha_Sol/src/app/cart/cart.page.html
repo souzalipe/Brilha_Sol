@@ -17,7 +17,9 @@
         <h2>{{ item.product.name }}</h2>
         <ion-input [(ngModel)]="item.quantity" type="number" min="1" (ionChange)="updateQuantity(item)"></ion-input>
         <p>Subtotal: R$ {{ item.subtotal | number:'1.2-2' }}</p>
+        <ion-button><a href="https://mpago.la/28P14uN">Finalizar</a></ion-button>
       </ion-label>
+      
     </ion-item>
   </ion-list>
 
