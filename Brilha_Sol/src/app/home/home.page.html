@@ -13,7 +13,7 @@
       <ion-label>
         <h2 class="nome_prod">{{ plant.name }}</h2>
         <p> Valor: R$ <span class="capacity">{{ plant.valor }}</span></p>
-        <a>{{ plant.link }}</a>
+        <a class="link">{{ plant.link }}</a>
       </ion-label>
     </ion-item>
   </ion-list>
@@ -32,14 +32,11 @@
       Mapa
     </ion-tab-button>
     
-    <ion-tab-button routerLink="/interface-de-usuatio" tab="radio">
-      <ion-icon name="person"></ion-icon>
-      Usuário
-    </ion-tab-button>    
-    
-    <ion-tab-button tab="search">
+   
+    <ion-tab-button tab="search" (click)="logout()">
       <ion-icon name="log-out"></ion-icon>
       Sair
     </ion-tab-button>
+    
   </ion-tab-bar>
 </ion-tabs>

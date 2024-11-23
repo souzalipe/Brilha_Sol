@@ -3,6 +3,8 @@ import { ModalController, NavController, ToastController } from '@ionic/angular'
 import { ProductModalComponent } from '../product-modal/product-modal.component';
 import { CartPage } from '../cart/cart.page';
 import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
+
 
 interface Product {
   name: string;
@@ -31,8 +33,10 @@ export class HomePage {
   constructor(
     private modalController: ModalController, 
     private toastController: ToastController, 
-    private cartService: CartService
+    private cartService: CartService, 
+    private router: Router // Adicione esta linha
   ) {}
+  
 
   async openProductModal(product: Product) {
     const modal = await this.modalController.create({
@@ -48,7 +52,14 @@ export class HomePage {
     });
     return await modal.present();
   }
-
+  logout() {
+    // Limpar informações de sessão
+    localStorage.clear();
+    sessionStorage.clear();
+  
+    // Redirecionar para a página de login
+    this.router.navigate(['/login']);
+  }
   async openMap() {
   
     const toast = await this.toastController.create({
