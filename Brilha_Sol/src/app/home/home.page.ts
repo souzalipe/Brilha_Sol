@@ -34,7 +34,7 @@ export class HomePage {
     private modalController: ModalController, 
     private toastController: ToastController, 
     private cartService: CartService, 
-    private router: Router // Adicione esta linha
+    private router: Router 
   ) {}
   
 
@@ -53,11 +53,10 @@ export class HomePage {
     return await modal.present();
   }
   logout() {
-    // Limpar informações de sessão
+ 
     localStorage.clear();
     sessionStorage.clear();
-  
-    // Redirecionar para a página de login
+
     this.router.navigate(['/login']);
   }
   async openMap() {
