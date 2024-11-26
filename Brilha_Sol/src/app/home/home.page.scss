@@ -1,3 +1,10 @@
+*{
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 
 .custom-header {
   --background: #ffffff; 
@@ -25,7 +32,18 @@ a {
 }
 
 
+ion-item{
+ width: 360px;
+ background-color: #005fc5;
+}
 
+ion-list{
+  background-color: #a5ffff;
+}
+
+ion-content{
+  background-color: #70a3dae1;
+}
 
 
 a:visited {
@@ -86,12 +104,21 @@ ion-tab-button[tab="search"] ion-icon {
 
 ion-item {
   position: relative;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  background-color: #cbe2e6;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 10px;
-  border-radius: 10px;
-
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
 }
+
+ion-item:hover {
+  transform: scale(1.05); /* Leve aumento */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  background-color: #b1d7de; /* Cor mais destacada */
+}
+
+
+
 .link{
 margin-top: 10px;
 }
