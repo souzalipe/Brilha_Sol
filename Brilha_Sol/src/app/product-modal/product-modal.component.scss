@@ -1,32 +1,82 @@
-:host {
-  ion-content {
-    --background: rgba(0, 0, 0, 0.5);
-  }
+/* Cabeçalho do modal */
+ion-header ion-toolbar {
+  background-color: #1565C0; /* Azul-escuro */
+  color: #FFFFFF; /* Texto branco */
+}
 
-  .modal-wrapper {
-    max-width: 90%;
-    max-height: 80%;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+ion-header ion-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-  img {
-    width: 70%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
+ion-buttons ion-button {
+  --background: transparent;
+  --color: #FFFFFF; /* Botão "Fechar" em branco */
+  font-size: 1rem;
+}
 
-  ion-header {
-    text-align: center;
-  }
+/* Conteúdo do modal */
+.modal-wrapper {
+  text-align: center;
+  padding: 20px;
+  background-color: #FFFFFF; /* Fundo do modal */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-  ion-button {
-    margin-top: 20px;
-  }
+/* Imagem do produto */
+.modal-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto do valor */
+.modal-wrapper p {
+  font-size: 1.2rem;
+  color: #424242; /* Texto neutro */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Input de quantidade */
+ion-item {
+  --background: #F5F5F5; /* Fundo claro */
+  --color: #424242; /* Texto neutro */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+ion-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #424242;
+}
+
+ion-input {
+  border: 1px solid #81C784; /* Verde-claro */
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 0.9rem;
+  color: #424242;
+}
+
+/* Botão "Adicionar ao Carrinho" */
+ion-button {
+  --background: #F9A825; /* Amarelo-dourado */
+  --color: #FFFFFF; /* Texto branco */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.close-btn{
+  background-color: #f15757f1;
+}
+
+ion-button:hover {
+  --background: #D68910; /* Amarelo mais escuro no hover */
 }

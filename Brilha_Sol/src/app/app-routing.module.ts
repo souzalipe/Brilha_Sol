@@ -21,10 +21,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'interface-de-usuatio',
-    loadChildren: () => import('./interface-de-usuatio/interface-de-usuatio.module').then( m => m.InterfaceDeUsuatioPageModule)
-  },
-  {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },

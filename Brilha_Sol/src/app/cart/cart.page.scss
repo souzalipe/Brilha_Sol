@@ -1,4 +1,83 @@
-a{
+/* Estilo geral para cores */
+body {
+    --ion-background-color: #F5F5F5; /* Fundo neutro */
+    --ion-text-color: #424242; /* Cor dos textos padrão */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Lista de produtos e carrinho */
+  ion-list {
+    padding: 10px;
+  }
+
+  a{
     text-decoration: none;
-    color: #fff;
-}
+    color: #F5F5F5;
+  }
+  
+  ion-item {
+    position: relative;
+    background-color: #FFFFFF; /* Fundo do card */
+    border: 1px solid #81C784; /* Borda verde-clara */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 14px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  ion-item:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+  }
+  
+  /* Thumbnail (imagem do produto) */
+  ion-thumbnail img {
+    border-radius: 8px;
+  }
+  
+  /* Nome do produto */
+  ion-label h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1565C0; /* Azul-escuro */
+    margin: 0;
+  }
+  
+  /* Subtotal e preço */
+  ion-label p {
+    font-size: 0.9rem;
+    color: #424242; /* Texto neutro */
+    margin: 5px 0;
+  }
+  
+  /* Botão de finalizar */
+  ion-button {
+    --background: #F9A825; /* Amarelo-dourado */
+    --color: #FFFFFF; /* Texto branco */
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+  
+  ion-button:hover {
+    --background: #D68910; /* Amarelo mais escuro no hover */
+  }
+  
+  /* Input de quantidade */
+  ion-input {
+    border: 1px solid #81C784; /* Verde-claro */
+    border-radius: 6px;
+    padding: 5px;
+    width: 60px;
+    font-size: 0.9rem;
+    color: #424242;
+  }
+  
+  /* Total */
+  ion-item:last-child {
+    background-color: #E3F2FD; /* Azul claro para destaque */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  

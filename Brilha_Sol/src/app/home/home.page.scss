@@ -4,7 +4,47 @@
   font-style: normal;
 }
 
+body {
+  --ion-background-color: #F5F5F5; /* Fundo neutro */
+  --ion-text-color: #424242; /* Cor dos textos padrão */
+}
 
+ion-list {
+  padding: 10px;
+}
+
+ion-item:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+.nome_prod {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1565C0; /* Azul-escuro */
+}
+
+/* Preço do produto */
+.valor {
+  font-size: 0.9rem;
+  color: #424242; /* Texto neutro */
+}
+
+.valor .capacity {
+  font-weight: bold;
+  color: #F9A825; /* Amarelo-dourado */
+}
+
+
+ion-item {
+  position: relative;
+  background-color: #FFFFFF; /* Fundo do card */
+  border: 1px solid #81C784; /* Borda verde-clara */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 14px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .custom-header {
   --background: #ffffff; 

@@ -12,7 +12,7 @@
       </ion-avatar>
       <ion-label>
         <h2 class="nome_prod">{{ plant.name }}</h2>
-        <p> Valor: R$ <span class="capacity">{{ plant.valor }}</span></p>
+        <p class="valor"> Valor: R$ <span class="capacity">{{ plant.valor }}</span></p>
       </ion-label>
     </ion-item>
   </ion-list>
@@ -24,13 +24,19 @@
       <ion-icon name="cart"></ion-icon> 
       Compras
     </ion-tab-button>
-    
+
     <ion-tab-button tab="radio" (click)="openMap()">
       <ion-icon name="map"></ion-icon> 
       Mapa
     </ion-tab-button>
     
-   
+    <ion-tab-button tab="star" routerLink="/feedback" routerDirection="forward">
+      <ion-icon name="star"></ion-icon>
+      Feedback
+    </ion-tab-button>
+    
+
+
     <ion-tab-button tab="search" (click)="logout()">
       <ion-icon name="log-out"></ion-icon>
       Sair
